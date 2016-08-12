@@ -23,6 +23,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,9 +40,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mRecyclerView = (RecyclerView) findViewById(R.id.rv);
+        mRecyclerView.addItemDecoration(new VerticalSpaceItemDecoration(10));
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mList_sectionItem = new ArrayList<>();
-        mMap_month = new HashMap<>();
+        mMap_month = new TreeMap<>();
         mMap_month.put("week1", getDays());
         mMap_month.put("week2", getDays());
         mMap_month.put("week3", getDays());
