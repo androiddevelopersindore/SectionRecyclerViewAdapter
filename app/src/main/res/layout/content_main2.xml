@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,12 +10,18 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".SectionActivity"
-    tools:showIn="@layout/section_activity">
+    tools:context="com.iamrajendra.myapplication.MainActivity"
+    tools:showIn="@layout/activity_main">
+    <Button
+       android:id="@+id/section_b"
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv"
+        android:text="Section List"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
-</RelativeLayout>
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/flip_b"
+        android:text="Flip Animation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
